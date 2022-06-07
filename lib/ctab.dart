@@ -895,7 +895,7 @@ class _CTabBarState extends State<CTabBar> {
       int index, double viewportWidth, double minExtent, double maxExtent) {
     if (!widget.isScrollable) return 0.0;
     int divisions = widget.tabs.length;
-    double divw = (index + 2) * (viewportWidth / (divisions + 2));
+    double divw = ((index + 1) / (divisions + 1)) * viewportWidth;
 
     double tabCenter = _indicatorPainter!.centerOf(index);
     double width = _indicatorPainter!.widthOf(index);
